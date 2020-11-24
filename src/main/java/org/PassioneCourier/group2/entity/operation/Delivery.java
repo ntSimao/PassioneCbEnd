@@ -1,5 +1,13 @@
 package org.PassioneCourier.group2.entity.operation;
 
+/**==============
+ *
+ * Description:Concrete Entity for Delivery
+ * Author(s): Justin Jenecke, Yaseen Levy
+ * Date: 20/11/2020
+ *
+ ================*/
+
 public class Delivery {
 
     private String deliveryNo;
@@ -9,6 +17,7 @@ public class Delivery {
 
     private String driverID;
     private String vehicleID;
+    private String helperID;
 
     protected Delivery() {
     }
@@ -19,6 +28,7 @@ public class Delivery {
         this.distance = b.distance;
         this.stops = b.stops;
         this.driverID = b.driverID;
+        this.helperID = b.helperID;
         this.vehicleID = b.vehicleID;
     }
 
@@ -42,6 +52,10 @@ public class Delivery {
         return driverID;
     }
 
+    public String getHelperID() {
+        return helperID;
+    }
+
     public String getVehicleID() {
         return vehicleID;
     }
@@ -54,6 +68,7 @@ public class Delivery {
         private int stops;
 
         private String driverID;
+        private String helperID;
         private String vehicleID;
 
         public Builder setDeliveryNo(String deliveryNo) {
@@ -81,6 +96,11 @@ public class Delivery {
             return this;
         }
 
+        public Builder setHelperID(String helperID) {
+            this.helperID = helperID;
+            return this;
+        }
+
         public Builder setVehicleID(String vehicleID) {
             this.vehicleID = vehicleID;
             return this;
@@ -93,6 +113,7 @@ public class Delivery {
             this.distance = d.distance;
             this.stops = d.stops;
             this.driverID = d.driverID;
+            this.helperID = d.helperID;
             this.vehicleID = d.vehicleID;
 
             return this;

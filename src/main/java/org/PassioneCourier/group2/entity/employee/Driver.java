@@ -1,5 +1,13 @@
 package org.PassioneCourier.group2.entity.employee;
 
+/**==============
+ *
+ * Description:Concrete Entity for Vehicle
+ * Author(s): Justin Jenecke, Yaseen Levy
+ * Date: 20/11/2020
+ *
+ ================*/
+
 public class Driver {
 
     private String driverID;
@@ -10,8 +18,8 @@ public class Driver {
     private String phoneNo;
     private String address;
 
-    private String vehicleID;
-    private String helperID;
+    //private String vehicleID;
+    //private String helperID;
 
     protected Driver() {
     }
@@ -24,8 +32,8 @@ public class Driver {
         this.licenceCode = builder.licenceCode;
         this.phoneNo = builder.phoneNo;
         this.address = builder.address;
-        this.vehicleID = builder.vehicleID;
-        this.helperID = builder.helperID;
+        //this.vehicleID = builder.vehicleID;
+        //this.helperID = builder.helperID;
     }
 
     public String getDriverID() { return driverID; }
@@ -40,9 +48,9 @@ public class Driver {
 
     public String getAddress() { return address; }
 
-    public String getVehicleID() { return vehicleID; }
+    //public String getVehicleID() { return vehicleID; }
 
-    public String getHelperID() { return helperID; }
+    //public String getHelperID() { return helperID; }
 
     @Override
     public String toString() {
@@ -53,8 +61,8 @@ public class Driver {
                 ", licenceCode='" + licenceCode + '\'' +
                 ", phoneNo='" + phoneNo + '\'' +
                 ", address='" + address + '\'' +
-                ", vehicleID='" + vehicleID + '\'' +
-                ", helperID='" + helperID + '\'' +
+                //", vehicleID='" + vehicleID + '\'' +
+                // ", helperID='" + helperID + '\'' +
                 '}';
     }
 
@@ -70,8 +78,8 @@ public class Driver {
         private String phoneNo;
         private String address;
 
-        private String vehicleID;
-        private String helperID;
+        //private String vehicleID;
+        //private String helperID;
 
         public Builder setDriverID(String driverID) {
             this.driverID = driverID;
@@ -103,15 +111,18 @@ public class Driver {
             return this;
         }
 
+        /*
         public Builder setVehicleID(String vehicleID) {
             this.vehicleID = vehicleID;
             return this;
         }
 
+
         public Builder setHelperID(String helperID) {
             this.helperID = helperID;
             return this;
         }
+        */
 
         public Builder copy(Driver d) {
 
@@ -121,8 +132,8 @@ public class Driver {
             this.licenceCode = d.licenceCode;
             this.phoneNo = d.phoneNo;
             this.address = d.address;
-            this.vehicleID = d.vehicleID;
-            this.helperID = d.helperID;
+            //this.vehicleID = d.vehicleID;
+            //this.helperID = d.helperID;
 
             return this;
         }

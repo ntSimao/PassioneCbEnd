@@ -1,5 +1,13 @@
 package org.PassioneCourier.group2.entity.asset;
 
+/**==============
+ *
+ * Description:Concrete Entity for Device
+ * Author(s): Justin Jenecke
+ * Date: 20/11/2020
+ *
+ ================*/
+
 public class Device {
 
     private String ID;

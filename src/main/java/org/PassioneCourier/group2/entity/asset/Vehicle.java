@@ -1,6 +1,13 @@
 package org.PassioneCourier.group2.entity.asset;
 
 import org.apache.maven.model.Build;
+/**==============
+ *
+ * Description:Concrete Entity for Vehicle
+ * Author(s): Justin Jenecke,
+ * Date: 20/11/2020
+ *
+ ================*/
 
 public class Vehicle {
 
@@ -8,7 +15,7 @@ public class Vehicle {
     private String vehicleCode;
     private String vehicleKm;
 
-    private String driverID;
+    //private String driverID;
     private String deviceID;
 
     protected Vehicle() {
@@ -19,7 +26,7 @@ public class Vehicle {
         this.ID = b.ID;
         this.vehicleCode = b.vehicleCode;
         this.vehicleKm = b.vehicleKm;
-        this.driverID = b.driverID;
+      //  this.driverID = b.driverID;
         this.deviceID = b.deviceID;
     }
 
@@ -35,9 +42,9 @@ public class Vehicle {
         return vehicleKm;
     }
 
-    public String getDriverID() {
+   /* public String getDriverID() {
         return driverID;
-    }
+    }*/
 
     public String getDeviceID() {
         return deviceID;
@@ -49,7 +56,7 @@ public class Vehicle {
                 "ID='" + ID + '\'' +
                 ", vehicleCode='" + vehicleCode + '\'' +
                 ", vehicleKm='" + vehicleKm + '\'' +
-                ", driverID='" + driverID + '\'' +
+               // ", driverID='" + driverID + '\'' +
                 ", deviceID='" + deviceID + '\'' +
                 '}';
     }
@@ -78,11 +85,11 @@ public class Vehicle {
             this.vehicleKm = vehicleKm;
             return this;
         }
-
+        /*
         public Builder setDriverID(String driverID) {
             this.driverID = driverID;
             return this;
-        }
+        }*/
 
         public Builder setDeviceID(String deviceID) {
             this.deviceID = deviceID;
@@ -94,7 +101,7 @@ public class Vehicle {
             this.ID = v.ID;
             this.vehicleCode = v.vehicleCode;
             this.vehicleKm = v.vehicleKm;
-            this.driverID = v.driverID;
+            //this.driverID = v.driverID;
             this.deviceID = v.deviceID;
 
             return this;

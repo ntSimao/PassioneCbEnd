@@ -1,5 +1,13 @@
 package org.PassioneCourier.group2.entity.employee;
 
+/**==============
+ *
+ * Description:Concrete Entity for Helper
+ * Author(s): Justin Jenecke
+ * Date: 20/11/2020
+ *
+ ================*/
+
 public class Helper {
 
     private String helperID;
@@ -9,7 +17,7 @@ public class Helper {
     private String phoneNo;
     private String address;
 
-    private String driverID;
+    //private String driverID;
 
     protected Helper() {
     }
@@ -20,7 +28,7 @@ public class Helper {
         this.lastName = b.lastName;
         this.phoneNo = b.phoneNo;
         this.address = b.address;
-        this.driverID = b.driverID;
+        //this.driverID = b.driverID;
     }
 
     public String getHelperID() {
@@ -43,9 +51,9 @@ public class Helper {
         return address;
     }
 
-    public String getDriverID() {
+   /* public String getDriverID() {
         return driverID;
-    }
+    }*/
 
     @Override
     public String toString() {
@@ -55,7 +63,7 @@ public class Helper {
                 ", lastName='" + lastName + '\'' +
                 ", phoneNo='" + phoneNo + '\'' +
                 ", address='" + address + '\'' +
-                ", driverID='" + driverID + '\'' +
+                //", driverID='" + driverID + '\'' +
                 '}';
     }
 
@@ -94,11 +102,12 @@ public class Helper {
             this.address = address;
             return this;
         }
-
+        /*
         public Builder setDriverID(String driverID) {
             this.driverID = driverID;
             return this;
         }
+        */
 
         public Builder copy(Helper h){
 
@@ -107,7 +116,7 @@ public class Helper {
             this.lastName = h.lastName;
             this.phoneNo = h.phoneNo;
             this.address = h.address;
-            this.driverID = h.driverID;
+            //this.driverID = h.driverID;
 
             return this;
         }
