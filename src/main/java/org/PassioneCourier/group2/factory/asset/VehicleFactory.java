@@ -14,15 +14,17 @@ public class VehicleFactory {
 
     public static Vehicle createVehicle(String ID,
                                         String vehicleCode,
-                                        String vehicleKm,
-                                      //String driverID,
+                                        int vehicleKm,
+                                        double value,
+                                        double depreciatedValue,
                                         String deviceID){
 
         Vehicle vehicle = new Vehicle.Builder()
                 .setID(ID)
                 .setVehicleCode(vehicleCode)
                 .setVehicleKm(vehicleKm)
-              //.setDriverID(driverID)
+                .setValue(value)
+                .setDepreciatedValue(depreciatedValue)
                 .setDeviceID(deviceID)
                 .build();
 

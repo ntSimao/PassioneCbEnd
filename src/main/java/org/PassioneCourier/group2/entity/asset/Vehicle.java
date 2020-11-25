@@ -13,9 +13,11 @@ public class Vehicle {
 
     private String ID;
     private String vehicleCode;
-    private String vehicleKm;
+    private int vehicleKm;
 
-    //private String driverID;
+    private double value;
+    private double depreciatedValue;
+
     private String deviceID;
 
     protected Vehicle() {
@@ -26,7 +28,8 @@ public class Vehicle {
         this.ID = b.ID;
         this.vehicleCode = b.vehicleCode;
         this.vehicleKm = b.vehicleKm;
-      //  this.driverID = b.driverID;
+        this.value = b.value;
+        this.depreciatedValue = b.depreciatedValue;
         this.deviceID = b.deviceID;
     }
 
@@ -38,13 +41,17 @@ public class Vehicle {
         return vehicleCode;
     }
 
-    public String getVehicleKm() {
+    public int getVehicleKm() {
         return vehicleKm;
     }
 
-   /* public String getDriverID() {
-        return driverID;
-    }*/
+    public double getValue() {
+        return value;
+    }
+
+    public double getDepreciatedValue() {
+        return depreciatedValue;
+    }
 
     public String getDeviceID() {
         return deviceID;
@@ -55,8 +62,9 @@ public class Vehicle {
         return "Vehicle{" +
                 "ID='" + ID + '\'' +
                 ", vehicleCode='" + vehicleCode + '\'' +
-                ", vehicleKm='" + vehicleKm + '\'' +
-               // ", driverID='" + driverID + '\'' +
+                ", vehicleKm=" + vehicleKm +
+                ", value=" + value +
+                ", depreciatedValue=" + depreciatedValue +
                 ", deviceID='" + deviceID + '\'' +
                 '}';
     }
@@ -66,9 +74,9 @@ public class Vehicle {
 
         private String ID;
         private String vehicleCode;
-        private String vehicleKm;
-
-        private String driverID;
+        private int vehicleKm;
+        private double value;
+        private double depreciatedValue;
         private String deviceID;
 
         public Builder setID(String ID) {
@@ -81,15 +89,20 @@ public class Vehicle {
             return this;
         }
 
-        public Builder setVehicleKm(String vehicleKm) {
+        public Builder setVehicleKm(int vehicleKm) {
             this.vehicleKm = vehicleKm;
             return this;
         }
-        /*
-        public Builder setDriverID(String driverID) {
-            this.driverID = driverID;
+
+        public Builder setValue(double value) {
+            this.value = value;
             return this;
-        }*/
+        }
+
+        public Builder setDepreciatedValue(double depreciatedValue) {
+            this.depreciatedValue = depreciatedValue;
+            return this;
+        }
 
         public Builder setDeviceID(String deviceID) {
             this.deviceID = deviceID;
@@ -101,7 +114,8 @@ public class Vehicle {
             this.ID = v.ID;
             this.vehicleCode = v.vehicleCode;
             this.vehicleKm = v.vehicleKm;
-            //this.driverID = v.driverID;
+            this.value = v.value;
+            this.depreciatedValue = v.depreciatedValue;
             this.deviceID = v.deviceID;
 
             return this;

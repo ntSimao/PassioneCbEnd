@@ -1,10 +1,18 @@
-package org.PassioneCourier.group2.factoryTest;
+package org.PassioneCourier.group2.factoryTest.employee;
 
 import org.PassioneCourier.group2.entity.employee.Helper;
 import org.PassioneCourier.group2.factory.employee.HelperFactory;
 import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+/**==============
+ *
+ * Description: Factory test class for creating a Helper
+ * Author(s): Justin Jenecke
+ * Date: 24/11/2020
+ *
+ ================*/
 
 public class HelperFactoryTest {
 

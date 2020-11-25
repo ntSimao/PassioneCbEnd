@@ -35,9 +35,7 @@ public class Device {
         return ID;
     }
 
-    public String getModel() {
-        return model;
-    }
+    public String getModel() { return model; }
 
     public String getManufacturer() {
         return manufacturer;
