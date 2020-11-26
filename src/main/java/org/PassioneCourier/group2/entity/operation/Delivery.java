@@ -1,5 +1,7 @@
 package org.PassioneCourier.group2.entity.operation;
 
+import javax.persistence.Entity;
+
 /**==============
  *
  * Description:Concrete Entity for Delivery
@@ -8,6 +10,7 @@ package org.PassioneCourier.group2.entity.operation;
  *
  ================*/
 
+@Entity
 public class Delivery {
 
     private String deliveryNo;

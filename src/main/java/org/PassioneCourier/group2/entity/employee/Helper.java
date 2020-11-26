@@ -1,5 +1,7 @@
 package org.PassioneCourier.group2.entity.employee;
 
+import javax.persistence.Entity;
+
 /**==============
  *
  * Description:Concrete Entity for Helper
@@ -8,6 +10,7 @@ package org.PassioneCourier.group2.entity.employee;
  *
  ================*/
 
+@Entity
 public class Helper {
 
     private String helperID;
@@ -16,8 +19,6 @@ public class Helper {
 
     private String phoneNo;
     private String address;
-
-    //private String driverID;
 
     protected Helper() {
     }
@@ -28,7 +29,6 @@ public class Helper {
         this.lastName = b.lastName;
         this.phoneNo = b.phoneNo;
         this.address = b.address;
-        //this.driverID = b.driverID;
     }
 
     public String getHelperID() {
@@ -51,10 +51,6 @@ public class Helper {
         return address;
     }
 
-   /* public String getDriverID() {
-        return driverID;
-    }*/
-
     @Override
     public String toString() {
         return "Helper{" +
@@ -63,7 +59,6 @@ public class Helper {
                 ", lastName='" + lastName + '\'' +
                 ", phoneNo='" + phoneNo + '\'' +
                 ", address='" + address + '\'' +
-                //", driverID='" + driverID + '\'' +
                 '}';
     }
 
@@ -75,8 +70,6 @@ public class Helper {
 
         private String phoneNo;
         private String address;
-
-        private String driverID;
 
         public Builder setHelperID(String helperID) {
             this.helperID = helperID;
@@ -102,12 +95,6 @@ public class Helper {
             this.address = address;
             return this;
         }
-        /*
-        public Builder setDriverID(String driverID) {
-            this.driverID = driverID;
-            return this;
-        }
-        */
 
         public Builder copy(Helper h){
 
@@ -116,7 +103,6 @@ public class Helper {
             this.lastName = h.lastName;
             this.phoneNo = h.phoneNo;
             this.address = h.address;
-            //this.driverID = h.driverID;
 
             return this;
         }

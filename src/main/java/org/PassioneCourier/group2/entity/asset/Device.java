@@ -1,5 +1,7 @@
 package org.PassioneCourier.group2.entity.asset;
 
+import javax.persistence.Entity;
+
 /**==============
  *
  * Description:Concrete Entity for Device
@@ -8,6 +10,7 @@ package org.PassioneCourier.group2.entity.asset;
  *
  ================*/
 
+@Entity
 public class Device {
 
     private String ID;

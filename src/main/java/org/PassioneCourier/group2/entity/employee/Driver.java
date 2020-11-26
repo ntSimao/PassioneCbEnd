@@ -1,5 +1,7 @@
 package org.PassioneCourier.group2.entity.employee;
 
+import javax.persistence.Entity;
+
 /**==============
  *
  * Description:Concrete Entity for Vehicle
@@ -8,6 +10,7 @@ package org.PassioneCourier.group2.entity.employee;
  *
  ================*/
 
+@Entity
 public class Driver {
 
     private String driverID;
@@ -17,9 +20,6 @@ public class Driver {
 
     private String phoneNo;
     private String address;
-
-    //private String vehicleID;
-    //private String helperID;
 
     protected Driver() {
     }
@@ -32,8 +32,6 @@ public class Driver {
         this.licenceCode = builder.licenceCode;
         this.phoneNo = builder.phoneNo;
         this.address = builder.address;
-        //this.vehicleID = builder.vehicleID;
-        //this.helperID = builder.helperID;
     }
 
     public String getDriverID() { return driverID; }
@@ -48,10 +46,6 @@ public class Driver {
 
     public String getAddress() { return address; }
 
-    //public String getVehicleID() { return vehicleID; }
-
-    //public String getHelperID() { return helperID; }
-
     @Override
     public String toString() {
         return "Driver{" +
@@ -61,8 +55,6 @@ public class Driver {
                 ", licenceCode='" + licenceCode + '\'' +
                 ", phoneNo='" + phoneNo + '\'' +
                 ", address='" + address + '\'' +
-                //", vehicleID='" + vehicleID + '\'' +
-                // ", helperID='" + helperID + '\'' +
                 '}';
     }
 
@@ -77,9 +69,6 @@ public class Driver {
 
         private String phoneNo;
         private String address;
-
-        //private String vehicleID;
-        //private String helperID;
 
         public Builder setDriverID(String driverID) {
             this.driverID = driverID;
@@ -111,19 +100,6 @@ public class Driver {
             return this;
         }
 
-        /*
-        public Builder setVehicleID(String vehicleID) {
-            this.vehicleID = vehicleID;
-            return this;
-        }
-
-
-        public Builder setHelperID(String helperID) {
-            this.helperID = helperID;
-            return this;
-        }
-        */
-
         public Builder copy(Driver d) {
 
             this.driverID = d.driverID;
@@ -132,8 +108,6 @@ public class Driver {
             this.licenceCode = d.licenceCode;
             this.phoneNo = d.phoneNo;
             this.address = d.address;
-            //this.vehicleID = d.vehicleID;
-            //this.helperID = d.helperID;
 
             return this;
         }
