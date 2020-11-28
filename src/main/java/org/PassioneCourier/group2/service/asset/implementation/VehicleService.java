@@ -27,7 +27,7 @@ public class VehicleService implements IVehicleService {
 
         //Optional<Device> n = repository.findOne(ID);
         try {
-            Vehicle v = repository.ge tOne(ID);
+            Vehicle v = repository.getOne(ID);
 
             repository.deleteById(ID);
             Vehicle vu = new Vehicle.Builder().copy(v).setID(v.getID()).build();
