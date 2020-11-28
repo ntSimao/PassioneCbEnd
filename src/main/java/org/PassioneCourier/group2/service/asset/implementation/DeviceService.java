@@ -29,23 +29,28 @@ public class DeviceService implements IDeviceService {
 
 
         //Optional<Device> n = repository.findOne(ID);
-        Device n = repository.getOne(ID);
 
-        repository.deleteById(ID);
-        Device a = new Device.Builder().copy(n).setID(n.getID()).build();
+        try {
+            Device n = repository.getOne(ID);
 
-        return repository.save(a);
+            repository.deleteById(ID);
+            Device a = new Device.Builder().copy(n).setID(n.getID()).build();
+
+            return repository.save(a);
+
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     @Override
     public boolean delete(String ID) {
-
 
        this.repository.deleteById(ID);
        if (this.repository.existsById(ID))
            return false;
        else
            return true;
-
     }
 }
