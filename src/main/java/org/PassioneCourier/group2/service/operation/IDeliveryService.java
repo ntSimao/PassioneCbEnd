@@ -1,4 +1,4 @@
-package org.PassioneCourier.group2.service.operation.interfaces;
+package org.PassioneCourier.group2.service.operation;
 
 import org.PassioneCourier.group2.entity.asset.Device;
 import org.PassioneCourier.group2.entity.operation.Delivery;

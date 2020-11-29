@@ -1,6 +1,5 @@
-package org.PassioneCourier.group2.service.asset.interfaces;
+package org.PassioneCourier.group2.service.asset;
 
-import org.PassioneCourier.group2.entity.asset.Device;
 import org.PassioneCourier.group2.entity.asset.Vehicle;
 import org.PassioneCourier.group2.service.IService;
 

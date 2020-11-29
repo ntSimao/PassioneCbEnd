@@ -1,12 +1,12 @@
 package org.PassioneCourier.group2.service.asset.implementation;
 
-import org.PassioneCourier.group2.entity.asset.Device;
 import org.PassioneCourier.group2.entity.asset.Vehicle;
-import org.PassioneCourier.group2.repository.asset.IDeviceRepository;
 import org.PassioneCourier.group2.repository.asset.IVehicleRepository;
-import org.PassioneCourier.group2.service.asset.interfaces.IVehicleService;
+import org.PassioneCourier.group2.service.asset.IVehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class VehicleService implements IVehicleService {
 
     @Autowired

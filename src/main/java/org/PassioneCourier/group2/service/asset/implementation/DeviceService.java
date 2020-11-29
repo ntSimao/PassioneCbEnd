@@ -1,27 +1,25 @@
 package org.PassioneCourier.group2.service.asset.implementation;
 
 import org.PassioneCourier.group2.entity.asset.Device;
-import org.PassioneCourier.group2.factory.asset.DeviceFactory;
 import org.PassioneCourier.group2.repository.asset.IDeviceRepository;
-import org.PassioneCourier.group2.repository.operation.IDeliveryRepository;
-import org.PassioneCourier.group2.service.asset.interfaces.IDeviceService;
+import org.PassioneCourier.group2.service.asset.IDeviceService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
+@Service
 public class DeviceService implements IDeviceService {
 
     @Autowired
-    private IDeviceRepository repository;
+    private IDeviceRepository deviceRepository;
 
     @Override
     public Device create(Device x) {
-        return repository.save(x);
+        return deviceRepository.save(x);
     }
 
     @Override
     public Device read(String ID) {
-        return repository.getOne(ID);
+        return deviceRepository.getOne(ID);
     }
 
     @Override
@@ -31,12 +29,12 @@ public class DeviceService implements IDeviceService {
         //Optional<Device> n = repository.findOne(ID);
 
         try {
-            Device n = repository.getOne(ID);
+            Device n = deviceRepository.getOne(ID);
 
-            repository.deleteById(ID);
+            deviceRepository.deleteById(ID);
             Device a = new Device.Builder().copy(n).setID(n.getID()).build();
 
-            return repository.save(a);
+            return deviceRepository.save(a);
 
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
@@ -47,8 +45,8 @@ public class DeviceService implements IDeviceService {
     @Override
     public boolean delete(String ID) {
 
-       this.repository.deleteById(ID);
-       if (this.repository.existsById(ID))
+       this.deviceRepository.deleteById(ID);
+       if (this.deviceRepository.existsById(ID))
            return false;
        else
            return true;

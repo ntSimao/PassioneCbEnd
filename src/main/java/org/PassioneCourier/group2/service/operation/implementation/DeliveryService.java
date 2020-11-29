@@ -1,12 +1,12 @@
 package org.PassioneCourier.group2.service.operation.implementation;
 
-import org.PassioneCourier.group2.entity.employee.Helper;
 import org.PassioneCourier.group2.entity.operation.Delivery;
-import org.PassioneCourier.group2.repository.asset.IDeviceRepository;
 import org.PassioneCourier.group2.repository.operation.IDeliveryRepository;
-import org.PassioneCourier.group2.service.operation.interfaces.IDeliveryService;
+import org.PassioneCourier.group2.service.operation.IDeliveryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class DeliveryService implements IDeliveryService {
 
     @Autowired
