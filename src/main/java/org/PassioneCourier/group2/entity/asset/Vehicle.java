@@ -1,6 +1,9 @@
 package org.PassioneCourier.group2.entity.asset;
 
 import org.apache.maven.model.Build;
+
+import javax.persistence.Id;
+
 /**==============
  *
  * Description:Concrete Entity for Vehicle
@@ -11,7 +14,9 @@ import org.apache.maven.model.Build;
 
 public class Vehicle {
 
+    @Id
     private String ID;
+
     private String vehicleCode;
     private int vehicleKm;
 

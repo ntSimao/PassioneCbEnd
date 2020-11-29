@@ -1,6 +1,7 @@
 package org.PassioneCourier.group2.entity.asset;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**==============
  *
@@ -13,7 +14,9 @@ import javax.persistence.Entity;
 @Entity
 public class Device {
 
+    @Id
     private String ID;
+
     private String model;
     private String manufacturer;
 

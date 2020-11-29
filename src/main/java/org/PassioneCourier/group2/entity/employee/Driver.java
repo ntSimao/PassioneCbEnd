@@ -1,6 +1,7 @@
 package org.PassioneCourier.group2.entity.employee;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**==============
  *
@@ -13,7 +14,9 @@ import javax.persistence.Entity;
 @Entity
 public class Driver {
 
+    @Id
     private String driverID;
+
     private String firstName;
     private String lastName;
     private String licenceCode;
